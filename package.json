@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "vite build --base-href 'https://lixnzo.github.io/lux-vintage/'",
     "preview": "vite preview"
   },
   "devDependencies": {
