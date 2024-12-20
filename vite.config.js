@@ -2,6 +2,8 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  base: 'lux-vintage', // Remplacez "nom-du-repo" par le nom exact de votre dépôt GitHub
+
   server: {
     host: '0.0.0.0',
     port: 5173,
