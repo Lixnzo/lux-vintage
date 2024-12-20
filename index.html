@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Motors - Premium Automotive Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">LUXURY MOTORS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/luxury.html">Luxury Cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/vintage.html">Vintage Collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-gold ms-2" href="/login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <video 
+        class="hero-video" 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        preload="auto"
+        defaultMuted
+        id="heroVideo"
+      >
+        <source src="vid/ThePerfectPorsche.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content" id="heroContent">
+        <h1>REDEFINING<br>LUXURY</h1>
+        <p>Experience automotive excellence at its finest</p>
+        <div class="hero-buttons">
+          <a href="/luxury.html" class="btn btn-gold">Explore Luxury</a>
+          <a href="/vintage.html" class="btn btn-outline-light ms-3">View Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections Preview -->
+    <section class="collections-preview">
+      <div class="collection-item luxury" data-aos="fade-right">
+        <div class="collection-content">
+          <h2>LUXURY FLEET</h2>
+          <img src="/img/911GT3RS.jpg" alt="">
+          <p>Contemporary masterpieces of engineering</p>
+          <a href="/luxury.html" class="btn btn-gold">Discover More</a>
+        </div>
+        <div class="collection-overlay"></div>
+      </div>
+      <div class="collection-item vintage" data-aos="fade-left">
+        <div class="collection-content">
+          <h2>VINTAGE CLASSICS</h2>
+          <img src="/img/Maserati 3500 GT.jpg" alt="">
+          <p>Timeless automotive legends</p>
+          <a href="/vintage.html" class="btn btn-gold">Explore Collection</a>
+        </div>
+        <div class="collection-overlay"></div>
+      </div>
+    </section>
+
+    <!-- Latest Additions Slider -->
+    <section class="latest-additions">
+      <div class="container-fluid px-0">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Slides will be added dynamically -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Statement -->
+    <section class="brand-statement">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center" data-aos="fade-up">
+            <h2>EXCELLENCE IN MOTION</h2>
+            <p class="textcol">Where luxury meets performance, and heritage embraces innovation. Each vehicle in our collection represents the pinnacle of automotive achievement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="footer-title">LUXURY MOTORS</h3>
+            <p>Premium automotive excellence since 1990</p>
+          </div>
+          <div class="col-md-4">
+            <h4>Contact</h4>
+            <p>Email: contact@luxurymotors.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+          </div>
+          <div class="col-md-4">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Luxury Motors. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/node_modules/aos/dist/aos.js"></script>
+    <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('heroVideo');
+        
+        // Force le démarrage de la vidéo
+        video.play().catch(function(error) {
+          console.log("La lecture automatique a échoué:", error);
+        });
+
+        // Redémarre la vidéo si elle est mise en pause
+        video.addEventListener('pause', function() {
+          video.play();
+        });
+      });
+    </script>
+  </body>
+</html>

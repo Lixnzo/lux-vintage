@@ -1,0 +1,194 @@
+/* Add these styles to your existing style.css file */
+
+/* Authentication Pages */
+.auth-page {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('/src/assets/auth-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.auth-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 76px;
+}
+
+.auth-card {
+  background: rgba(26, 26, 26, 0.95);
+  border-radius: 15px;
+  padding: 2.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.auth-title {
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.auth-form .input-group-text {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+}
+
+.auth-form .form-control {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  color: #fff;
+  height: 48px;
+}
+
+.auth-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.auth-form .toggle-password {
+  border-color: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+}
+
+.auth-form .toggle-password:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.forgot-password {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+  color: var(--light-gold);
+  text-decoration: underline;
+}
+
+.social-login {
+  position: relative;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.social-login::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--dark);
+}
+
+.register-link {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.register-link:hover {
+  color: var(--light-gold);
+  text-decoration: underline;
+}
+
+/* Modal Styling */
+.modal-content {
+  background: rgba(26, 26, 26, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.modal-header {
+  border-bottom-color: rgba(212, 175, 55, 0.1);
+}
+
+.modal-header .btn-close {
+  color: #fff;
+  filter: invert(1) brightness(200%);
+}
+
+.modal-title {
+  color: var(--gold);
+}
+
+/* Form Check Styling */
+.form-check-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(212, 175, 55, 0.1);
+}
+
+.form-check-input:checked {
+  background-color: var(--gold);
+  border-color: var(--gold);
+}
+
+.form-check-label {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Alert Styling */
+.alert {
+  border: none;
+  border-radius: 8px;
+}
+
+.alert-danger {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+.alert-success {
+  background: rgba(25, 135, 84, 0.1);
+  color: #198754;
+}
+
+/* Password Strength Meter */
+.password-strength {
+  font-size: 0.8rem;
+}
+
+.password-strength .progress {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+  
+  .auth-title {
+    font-size: 1.5rem;
+  }
+  
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
