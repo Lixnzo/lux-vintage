@@ -1,9 +1,9 @@
-name: Deploy Node.js App to GitHub Pages
+name: Deploy Vite App to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch (e.g., main or master)
+      - main  # Change this to your default branch
 
 jobs:
   build-and-deploy:
@@ -24,13 +24,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Build the project (if applicable)
+      # Build the project
       - name: Build project
-        run: npm run build  # Replace with your build script if needed
+        run: npm run build
+
+      # Debug: List files in the build directory
+      - name: List files in build directory
+        run: ls -R ./dist  # Vite outputs to the `dist` folder by default
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Replace with your build output directory
+          publish_dir: ./dist  # Vite outputs to the `dist` folder by default
+          publish_branch: gh-pages  # Ensure this matches your GitHub Pages branch
