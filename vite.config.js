@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/', // Remplacez "nom-du-repo" par le nom exact de votre dépôt GitHub
+  base: '/lux-vintage/', // Set the base URL for GitHub Pages
 
   server: {
     host: '0.0.0.0',
